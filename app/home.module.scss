@@ -9,6 +9,9 @@
 $nav-height: 50px;
 
 .Nav {
+    position: sticky;
+    background-color: rgba($color: #FFF, $alpha: 0.66);
+    top: 0;
 	height: $nav-height;
 	border-bottom: 1px solid rgba($color: #000000, $alpha: 0.16);
 
@@ -18,7 +21,7 @@ $nav-height: 50px;
 		height: 100%;
 		display: flex;
 		justify-content: space-between;
-        padding: 0 90px;
+		padding: 0 90px;
 	}
 
 	.NavLeft {
@@ -32,14 +35,14 @@ $nav-height: 50px;
 		line-height: $nav-height;
 		height: $nav-height;
 		margin-left: 10px;
-        cursor: pointer;
+		cursor: pointer;
 	}
 
 	.NavRight {
 		min-width: 50%;
 		display: flex;
 		align-items: center;
-        justify-content: flex-end;
+		justify-content: flex-end;
 
 		.NavItem {
 			margin-right: 20px;
@@ -71,3 +74,123 @@ $nav-height: 50px;
 .TextShadow {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.Home {
+	padding-bottom: 100px;
+}
+
+.Section {
+	padding-top: 80px;
+	padding-bottom: 160;
+	margin: 0 auto;
+	max-width: 1200px;
+	text-align: center;
+}
+.SectionTitle {
+    margin-bottom: 50px;
+}
+.SectionContent {
+	.ProjectBg {
+		display: flex;
+        width: 800px;
+        margin: 0 auto 60px;
+		justify-content: space-around;
+	}
+
+    .ProjectBgText{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-size: 32px;
+            color: #777;
+        }
+    }
+}
+
+
+.ProjectIntroText{
+    margin-top: 30px;
+    h3{
+        font-size: 26px;
+
+    }
+}
+
+.ProjectIntroTextDetail{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    p{
+        margin-top: 10px;
+        text-indent: 2em;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .Banner {
+      height: 50vw;
+      max-height: 400px;
+    }
+  
+    .NavTitle{
+        font-size: 18px !important;
+    }
+    .Nav {
+      .NavContent {
+        width: 100%;
+        padding: 0 20px;
+      }
+  
+      .NavRight {
+        .NavItem {
+          padding-left: 10px;
+          font-size: 14px;
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  
+    
+    .Home {
+      padding-bottom: 50px;
+    }
+  
+    .Section {
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+  
+    .SectionContent {
+      .ProjectBg {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
+        align-items: center;
+      }
+  
+      .ProjectBgText {
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+  
+    .ProjectIntroText {
+      h3 {
+        font-size: 20px;
+      }
+    }
+  
+    .ProjectIntroTextDetail {
+        padding: 20px 30px;
+      p {
+        margin-top: 5px;
+      }
+    }
+  }
+  
