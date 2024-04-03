@@ -1,0 +1,73 @@
+.Banner {
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	height: 30vw;
+	max-height: 600px;
+}
+
+$nav-height: 50px;
+
+.Nav {
+	height: $nav-height;
+	border-bottom: 1px solid rgba($color: #000000, $alpha: 0.16);
+
+	.NavContent {
+		width: 1200px;
+		margin: 0 auto;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+        padding: 0 90px;
+	}
+
+	.NavLeft {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.NavTitle {
+		font-size: 22px;
+		line-height: $nav-height;
+		height: $nav-height;
+		margin-left: 10px;
+        cursor: pointer;
+	}
+
+	.NavRight {
+		min-width: 50%;
+		display: flex;
+		align-items: center;
+        justify-content: flex-end;
+
+		.NavItem {
+			margin-right: 20px;
+			height: $nav-height;
+			line-height: $nav-height;
+			padding-left: 20px;
+			padding-right: 20px;
+			cursor: pointer;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 0;
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background-color: rgba($color: #0066b2, $alpha: 0.5);
+				visibility: hidden;
+				transition: all 0.2s ease-in-out;
+			}
+			&:hover::before {
+				visibility: visible;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.TextShadow {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
